@@ -30,7 +30,7 @@ if(process.argv[2] === '--postman') {
 
 const corsOptions = {
    origin: function(origin, callback) {
-      if(whitelist.includes(origin) || !origin) {  // Permite solicitudes sin origen (como Postman)
+      if(whitelist.includes(origin) || !origin) {  
 
          // Permite la conexión
          callback(null, true)
@@ -42,6 +42,11 @@ const corsOptions = {
 }
 
 app.use(cors(corsOptions))
+
+app.get('/api/ping', (req, res) => {
+  res.send('pong');
+});
+
 
 // Definir ruta
 app.use('/api/services', servicesRoutes)
