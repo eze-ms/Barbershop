@@ -4,28 +4,33 @@ import { inject, onMounted } from 'vue';
 import { useRouter } from 'vue-router';
 import AuthAPI from '@/api/AuthAPI';
 
-const { setUser, getUserAppointments } = useUserStore(); // Importar la función para actualizar el usuario
+const { setUser, getUserAppointments } = useUserStore(); 
 const toast = inject('toast');
-  const router = useRouter();
+const router = useRouter();
 
   // Función de login
   const handleSubmit = async (formData) => {
     try {
-      const response = await AuthAPI.login(formData); // Llama a la API de login
-      const { data: { token, user } } = response; // Extrae token y usuario
-      localStorage.setItem('AUTH_TOKEN', token);
+  const response = await AuthAPI.login(formData); 
+  const { data: { token, user } } = response; 
+  localStorage.setItem('AUTH_TOKEN', token);
 
-      setUser(user); // Actualiza el estado del usuario
-      await getUserAppointments(); // Carga las citas del usuario
+  setUser(user); 
+  await getUserAppointments(); 
 
-      router.push({ name: 'my-appointments' }); // Redirige después del login
-    } catch (error) {
-      const message = error.response?.data?.msg || 'Error desconocido. Intenta nuevamente.';
-      toast.open({
-        message: message,
-        type: 'error',
-      });
-    }
+  if (user.admin) {
+    router.push({ name: 'admin-appointments' }); 
+  } else {
+    router.push({ name: 'my-appointments' }); 
+  }
+} catch (error) {
+  const message = error.response?.data?.msg || 'Error desconocido. Intenta nuevamente.';
+  toast.open({
+    message: message,
+    type: 'error',
+  });
+}
+
   };
 
   // Scroll automático al cargar la vista

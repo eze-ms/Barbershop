@@ -7,7 +7,7 @@ import { sendEmailNewAppointment, sendEmailUpdateAppointment, sendEmailCancelApp
 //! Función para crear una nueva cita
 const createAppointment = async (req, res) => {
   const appointment = req.body;
-  appointment.user = req.user._id.toString(); // Asigna correctamente el ID del usuario autenticado
+  appointment.user = req.user._id.toString(); 
   
   if (appointment.date) {
     // Mantener la fecha tal como llega desde el cliente (sin conversión de zona horaria)
@@ -18,7 +18,7 @@ const createAppointment = async (req, res) => {
 
   try {
     const newAppointment = new Appointment(appointment) // Crea una nueva instancia de Appointment con los datos recibidos
-    const result = await newAppointment.save();  // Guarda la cita en la base de datos
+    const result = await newAppointment.save(); 
 
     await sendEmailNewAppointment({
       date: formatDate (result.date),
@@ -170,7 +170,6 @@ const deleteAppointment = async (req, res) => {
     // Guarda los datos de la cita antes de eliminarla
     const { date, time } = appointment;
 
-    // Elimina la cita
     await appointment.deleteOne();
 
     // Envía el correo utilizando los datos guardados

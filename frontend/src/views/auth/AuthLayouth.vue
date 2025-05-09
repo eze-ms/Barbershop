@@ -10,7 +10,7 @@
 </script>
 
 <template>
-     <div class="mx-auto lg:w-3/5 mt-20">
+     <div class="mx-auto lg:w-3/5 mt-20 mb-20">
         <RouterView />
 
         <nav class="mt-5 text-sm flex flex-col items-center space-y-5 lg:flex-row lg:justify-center lg:space-y-0 lg:space-x-3">

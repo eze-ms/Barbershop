@@ -117,10 +117,10 @@ router.beforeEach(async (to, from, next) => {
         next() // Deja pasar si está autenticado
       }
     } catch (error) {
-      next({ name: 'login' }) // Redirige al login si no está autenticado
+      next({ name: 'login' }) 
     }
   } else {
-    next() // Rutas sin restricciones
+    next() 
   }
 })
 

@@ -8,11 +8,10 @@ const api = axios.create({
 // Este interceptor se ejecuta antes de cada solicitud
 api.interceptors.request.use((config) => {
   const token = localStorage.getItem('AUTH_TOKEN')
-  if (token) {
-    config.headers.Authorization = `Bearer ${token}`
+  if(token) {
+      config.headers.Authorization = `Bearer ${token}`
   }
   return config
 })
-
 
 export default api
