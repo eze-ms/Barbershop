@@ -1,92 +1,148 @@
-# Barbershop MEVN Application
+# 💈 Barbershop — Aplicación MEVN
 
-## 📄 Description
-This project is a web application for managing a barbershop, developed using the MEVN stack (MongoDB, Express, Vue.js, Node.js). It offers features such as user authentication, appointment scheduling, and dynamic service management, providing a seamless and efficient user experience.
+![Status](https://img.shields.io/badge/status-live-success?style=flat-square)
+![Node.js](https://img.shields.io/badge/backend-Node.js-green?style=flat-square)
+![MongoDB](https://img.shields.io/badge/database-MongoDB-brightgreen?style=flat-square)
+![Frontend](https://img.shields.io/badge/frontend-Vue.js-blue?style=flat-square)
 
----
 
-## Functionality
+## 📄 Descripción
 
-### **Frontend**
-1. **Authentication:**
-   - User login and registration with token-based state management.
-   - Display "Iniciar Sesión" or personalized greetings based on the authentication state.
+**Barbershop** es una aplicación web desarrollada con el stack **MEVN** (MongoDB, Express, Vue.js, Node.js), pensada para la gestión de una barbería. Permite a los usuarios autenticarse, reservar turnos y consultar servicios de forma intuitiva, todo desde una interfaz moderna y adaptada a dispositivos móviles.
 
-2. **Service Display:**
-   - Dynamically fetch and render available services using Pinia and Axios.
-   - Responsive grid layout with service descriptions, prices, and icons.
-
-3. **Appointment Management:**
-   - Intuitive interface for booking, viewing, and canceling appointments.
-   - Redirection to the login page if unauthenticated.
-
-4. **Navigation:**
-   - Conditional navigation items based on user roles:
-     - Unauthenticated: "Reservar Ahora."
-     - Authenticated: "Mis Citas" and "Nueva Cita."
-
-5. **Styling:**
-   - Built with Tailwind CSS for modern, responsive, and mobile-first design.
-   - Custom theming for a professional and cohesive appearance.
 
 ---
 
-### **Backend**
-1. **Authentication:**
-   - Secure user authentication using JSON Web Tokens (JWT).
-   - Middleware to protect routes and validate tokens.
+## 🌐 Demo
 
-2. **Services API:**
-   - Endpoints to fetch all services dynamically from MongoDB.
-   - Easily extensible to add, update, or delete services.
-
-3. **Appointment API:**
-   - Endpoints for creating, updating, viewing, and deleting appointments.
-   - Email notifications to users and administrators upon booking or cancellation.
-
-4. **User API:**
-   - CRUD operations for managing user profiles.
-   - Validation for strong password enforcement (customizable).
-
-5. **Error Handling:**
-   - Global error middleware to provide consistent and meaningful error messages.
-   - Validation and error management for all incoming requests.
-
-6. **Database:**
-   - MongoDB used for storing user, service, and appointment data.
-   - Schemas designed for scalability and ease of querying.
-
-7. **Environment Variables:**
-   - Configuration for database connection, JWT secret, and email notifications.
+🔗 [barbershop-mevn.vercel.app](https://barbershop-mevn.vercel.app)
 
 ---
 
-## 💻 Technologies Used
 
-### **Frontend**
-- Vue.js: Core framework for building the user interface.
-- Pinia: State management for authentication and service data.
-- Axios: HTTP client for API communication.
-- Tailwind CSS: Styling framework for responsive and modern design.
+## ✨ Funcionalidades
 
-### **Backend**
-- Node.js: Runtime for server-side scripting.
-- Express.js: Framework for building RESTful APIs.
-- MongoDB: Database for data storage.
-- JSON Web Tokens (JWT): For secure user authentication.
-- Nodemailer: For email notifications.
+### 🔹 Frontend
+
+- **Autenticación de usuarios:**
+  - Registro e inicio de sesión con manejo de tokens JWT.
+  - Vista dinámica según el estado de autenticación (botón "Iniciar Sesión", saludo personalizado, etc.).
+
+- **Visualización de servicios:**
+  - Servicios cargados dinámicamente desde la base de datos usando **Pinia** y **Axios**.
+  - Diseño responsivo en cuadrícula con nombre, descripción, precio e icono.
+
+- **Gestión de turnos:**
+  - Reserva, visualización y cancelación de citas.
+  - Redirección automática si el usuario no está autenticado.
+
+- **Navegación condicional:**
+  - Invitados: solo botón “Reservar Ahora”.
+  - Usuarios autenticados: acceso a "Mis Citas" y "Nueva Cita".
+
+- **Estilo moderno:**
+  - Estilizado con **Tailwind CSS** y diseño mobile-first personalizado.
 
 ---
 
-## 📋 Requirements
-- **Node.js:** Version 16 or higher.
-- **MongoDB:** Running locally or via a cloud service.
-- **NPM or Yarn:** For dependency management.
+### 🔹 Backend
+
+- **Autenticación segura:**
+  - Autenticación con **JSON Web Tokens (JWT)**.
+  - Middleware de protección para rutas privadas.
+
+- **API de Servicios:**
+  - Endpoints REST para obtener servicios desde MongoDB.
+  - Pensado para ser escalable y fácil de extender (alta/baja/modificación de servicios).
+
+- **API de Turnos:**
+  - Gestión completa de citas: crear, ver, cancelar.
+  - Envío de correos a usuarios y administradores (con Nodemailer).
+
+- **API de Usuarios:**
+  - Registro, login y edición de perfil.
+  - Validación personalizada de contraseñas seguras.
+
+- **Manejo de errores:**
+  - Middleware global de errores.
+  - Validaciones consistentes y respuestas claras.
+
+- **Base de datos:**
+  - **MongoDB Atlas** como sistema de almacenamiento principal.
+  - Esquemas diseñados para rendimiento y escalabilidad.
+
+- **Variables de entorno:**
+  - Conexión a MongoDB, claves JWT, configuración de envío de emails, frontend URL.
 
 ---
 
-## 🛠️ Installation
+## 💻 Tecnologías Utilizadas
 
-### **1. Clone the repository:**
+### Frontend
+- **Vue.js**
+- **Pinia**
+- **Axios**
+- **Tailwind CSS**
+
+### Backend
+- **Node.js**
+- **Express**
+- **MongoDB + Mongoose**
+- **JSON Web Tokens (JWT)**
+- **Nodemailer**
+
+---
+
+## 📋 Requisitos
+
+- **Node.js**: v16 o superior
+- **MongoDB Atlas**: o instancia local
+- **Cuenta SMTP (Mailtrap u otra)**
+
+---
+
+
+## 🧱 Estructura del Proyecto
+
 ```bash
-git clone https://github.com/eze-ms/Barbershop
+Barbershop/
+├── backend/                    # Backend Express + MongoDB
+│   ├── config/                 # Configuración de DB y servicios
+│   ├── controllers/            # Lógica de negocio por módulo
+│   ├── data/                   # Datos precargados, catálogos o fixtures
+│   ├── emails/                 # Plantillas y lógica para emails
+│   ├── handlers/               # Validaciones, errores y utilidades del request
+│   ├── middlewares/           # Autenticación y validaciones
+│   ├── models/                 # Esquemas de Mongoose
+│   ├── routes/                 # Definición de endpoints
+│   ├── utils/                  # Funciones auxiliares reutilizables
+│   ├── index.js                # Entrada principal del servidor
+│   └── ...
+├── frontend/                   # Frontend Vue 3 + Vite
+│   ├── src/
+│   │   ├── assets/             # Imágenes y recursos estáticos
+│   │   ├── components/         # Componentes reutilizables
+│   │   ├── views/              # Vistas de páginas
+│   │   ├── stores/             # Estado global con Pinia
+│   │   ├── router/             # Definición de rutas frontend
+│   │   ├── helpers/            # Funciones auxiliares (formato, validación, etc.)
+│   │   └── main.js             # Punto de arranque de la app
+│   ├── public/                 # Recursos públicos
+│   ├── .env.local              # Variables de entorno para Vite
+│   └── vite.config.js          # Configuración de Vite
+├── README.md
+└── .gitignore
+
+
+```
+---
+
+## 🛠️ Instalación
+
+```bash
+git clone https://github.com/eze-ms/Barbershop.git
+
+```
+---
+
+© 2025. Proyecto desarrollado por Ezequiel Macchi Seoane
