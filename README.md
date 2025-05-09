@@ -1,4 +1,4 @@
-# 💈 Barbershop — Aplicación MEVN
+# Barbershop — Aplicación MEVN
 
 ![Status](https://img.shields.io/badge/status-live-success?style=flat-square)
 ![Node.js](https://img.shields.io/badge/backend-Node.js-green?style=flat-square)
@@ -16,6 +16,13 @@
 ## 🌐 Demo
 
 🔗 [barbershop-mevn.vercel.app](https://barbershop-mevn.vercel.app)
+
+---
+
+## 🖼️ Capturas
+
+![Formulario](./frontend/public/img/barbershop-cover.webp)
+![Formulario](./frontend/public/img/barbershop.webp)
 
 ---
 
@@ -145,4 +152,4 @@ git clone https://github.com/eze-ms/Barbershop.git
 ```
 ---
 
-© 2025. Proyecto desarrollado por Ezequiel Macchi Seoane
+© 2024. Proyecto desarrollado por Ezequiel Macchi Seoane
