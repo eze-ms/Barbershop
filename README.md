@@ -1,14 +1,15 @@
-# Barbershop — Aplicación MEVN
+# Barbershop — Sistema de Gestión para Barberías (MEVN Stack)
 
 ![Status](https://img.shields.io/badge/status-live-success?style=flat-square)
 ![Node.js](https://img.shields.io/badge/backend-Node.js-green?style=flat-square)
 ![MongoDB](https://img.shields.io/badge/database-MongoDB-brightgreen?style=flat-square)
 ![Frontend](https://img.shields.io/badge/frontend-Vue.js-blue?style=flat-square)
+![License: MIT](https://img.shields.io/badge/license-MIT-blue.svg)
 
 
 ## 📄 Descripción
 
-**Barbershop** es una aplicación web desarrollada con el stack **MEVN** (MongoDB, Express, Vue.js, Node.js), pensada para la gestión de una barbería. Permite a los usuarios autenticarse, reservar turnos y consultar servicios de forma intuitiva, todo desde una interfaz moderna y adaptada a dispositivos móviles.
+**Barbershop** es una aplicación web desarrollada con el stack **MEVN** (MongoDB, Express, Vue.js, Node.js), pensada para la gestión de una barbería. Permite a los usuarios autenticarse, reservar turnos y consultar servicios de forma intuitiva, todo desde una interfaz responsive y optimizada para móviles.
 
 
 ---
@@ -21,8 +22,11 @@
 
 ## 🖼️ Capturas
 
-![Formulario](./frontend/public/img/barbershop-cover.webp)
-![Formulario](./frontend/public/img/barbershop.webp)
+#### Vista de portada
+![Portada de la app Barbershop](./frontend/public/img/barbershop-cover.webp)
+
+#### Panel de citas del usuario
+![Panel con los servicios del usuario](./frontend/public/img/barbershop.webp)
 
 ---
 
@@ -150,6 +154,20 @@ Barbershop/
 git clone https://github.com/eze-ms/Barbershop.git
 
 ```
+# Instalar dependencias del backend
+cd backend
+npm install
+
+# Iniciar backend
+npm run dev
+
+# Instalar dependencias del frontend
+cd ../frontend
+npm install
+
+# Iniciar frontend
+npm run dev
+
 ---
 
 © 2024. Proyecto desarrollado por Ezequiel Macchi Seoane
