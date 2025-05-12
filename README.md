@@ -27,6 +27,7 @@
 <h4>Panel de servicios del usuario</h4>
 <img src="./frontend/public/img/barbershop.webp" width="600"/>
 
+---
 
 ## ✨ Funcionalidades
 
