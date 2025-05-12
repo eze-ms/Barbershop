@@ -24,7 +24,7 @@
 #### Vista de portada
 ![Portada de la app Barbershop](./frontend/public/img/barbershop-cover.webp)
 
-#### Panel de citas del usuario
+#### Panel de servicios del usuario
 ![Panel con los servicios del usuario](./frontend/public/img/barbershop.webp)
 
 ---
