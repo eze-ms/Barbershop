@@ -152,22 +152,29 @@ Barbershop/
 
 ```bash
 git clone https://github.com/eze-ms/Barbershop.git
-
 ```
-# Instalar dependencias del backend
+
+### Instalar dependencias del backend
+```bash
 cd backend
 npm install
+```
 
-# Iniciar backend
+### Iniciar backend
+```bash
 npm run dev
+```
 
-# Instalar dependencias del frontend
-cd ../frontend
+### Instalar dependencias del frontend
+```bash
+cd frontend
 npm install
+```
 
-# Iniciar frontend
+### Iniciar frontend
+```bash
 npm run dev
-
+```
 ---
 
 © 2024. Proyecto desarrollado por Ezequiel Macchi Seoane
