@@ -19,16 +19,14 @@
 
 ---
 
-## 🖼️ Capturas
+<h2>🖼️ Capturas</h2>
 
-#### Vista de portada
-![Portada de la app Barbershop](./frontend/public/img/barbershop-cover.webp)
+<h4>Vista de portada</h4>
+<img src="./frontend/public/img/barbershop-cover.webp" width="600"/>
 
-#### Panel de servicios del usuario
-![Panel con los servicios del usuario](./frontend/public/img/barbershop.webp)
-
+<h4>Panel de servicios del usuario</h4>
+<img src="./frontend/public/img/barbershop.webp" width="600"/>
 ---
-
 
 ## ✨ Funcionalidades
 
