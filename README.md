@@ -4,7 +4,6 @@
 ![Node.js](https://img.shields.io/badge/backend-Node.js-green?style=flat-square)
 ![MongoDB](https://img.shields.io/badge/database-MongoDB-brightgreen?style=flat-square)
 ![Frontend](https://img.shields.io/badge/frontend-Vue.js-blue?style=flat-square)
-![License: MIT](https://img.shields.io/badge/license-MIT-blue.svg)
 
 
 ## 📄 Descripción
